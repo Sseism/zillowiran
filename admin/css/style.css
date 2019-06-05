@@ -3214,4 +3214,7 @@ table.focus-on tbody tr.focused td {
   padding-top: 14px;
   font-size: 0.9em;
 }
+.show {
+    display: inline-block !important;
+}
 /*# sourceMappingURL=style.css.map */

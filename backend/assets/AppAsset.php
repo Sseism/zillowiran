@@ -18,7 +18,7 @@ class AppAsset extends AssetBundle
         'css/icons.css'
     ];
     public $js = [
-        'js/jquery.min.js',
+//        'js/jquery.min.js',
         'js/bootstrap.bundle.min.js',
         'js/modernizr.min.js',
         'js/detect.js',
@@ -28,14 +28,14 @@ class AppAsset extends AssetBundle
         'js/waves.js',
         'js/jquery.nicescroll.js',
         'js/jquery.scrollTo.min.js',
-        'js/morris.min.js',
-        'js/raphael.min.js',
-        'js/dashboard.int.js',
+       
+//        'js/raphael.min.js',
+//        'js/dashboard.int.js',
         'js/app.js',
     
     ];
     public $depends = [
         'yii\web\YiiAsset',
-//        'yii\bootstrap\BootstrapAsset',
+        'yii\bootstrap\BootstrapAsset',
     ];
 }
