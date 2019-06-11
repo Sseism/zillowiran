@@ -3,12 +3,16 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\Accommodation;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
 
+use backend\models\Accommodation;
+use backend\models\AccType;
+use backend\models\Accinfacilitie;
+use backend\models\AccRegion;
 /**
  * AccommodationController implements the CRUD actions for Accommodation model.
  */
@@ -65,13 +69,16 @@ class AccommodationController extends Controller
     public function actionCreate()
     {
         $model = new Accommodation();
-
+        
+        $model->acc_type_id=ArrayHelper::map(AccType::find()->all(),'id','title');
+        $accRegion=AccRegion::find()->all();
+        
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
-
+$model->type = '1';
         return $this->render('create', [
-            'model' => $model,
+            'model' => $model,'accRegion'=>$accRegion
         ]);
     }
 

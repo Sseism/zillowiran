@@ -16,8 +16,16 @@ use yii\widgets\ActiveForm;
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">       
                 <?= $form->field($model, 'title')->textInput(['maxlength' => true, 'id' => 'title', 'placeholder' => Yii::t('app', 'عنوان')]) ?>
             </div>
-            <div class=" col-lg-4 col-md-4 col-sm-6 col-xs-6">    
-                <?= $form->field($model, 'type')->textInput() ?>
+            
+            <div class=" col-lg-4 col-md-4 col-sm-6 col-xs-6">  
+                <div class="col-md-6">  
+                    <?= $form->field($model, 'acc_type_id')->dropDownList($model->acc_type_id,['options'=>
+                                   ['data-target' => 'yourAtt']])->label('  '); ?>
+                </div>
+                <div class="col-md-6">  
+                   <?= $form->field($model, 'type')->radioList( ['1'=>'دربست','2'=>'خصوصی']); ?>
+                </div>
+                
             </div>  
             <div class=" col-lg-4 col-md-4 col-sm-6 col-xs-6">    
                 <?= $form->field($model, 'quantity')->textInput() ?>

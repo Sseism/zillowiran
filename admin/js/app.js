@@ -146,3 +146,15 @@
         "use strict";
         $.MainApp.init();
     }(window.jQuery);
+    
+    
+        
+    $('.accType').on('change',function(){
+    if($(this).val()==1){
+        $('.range').attr('disabled',false);
+    }else{
+        $('.range').attr('disabled',true);
+        
+         $('.range').prop('selectedIndex',0);
+    }
+});
