@@ -64,7 +64,6 @@ $this->params['breadcrumbs'][] = $this->title;
 //                    return $span;
 //                }
                 ],
-            
             'title',
             'type',
             'acc_type_id',

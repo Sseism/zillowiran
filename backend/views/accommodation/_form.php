@@ -17,7 +17,10 @@ use yii\widgets\ActiveForm;
                 <?= $form->field($model, 'title')->textInput(['maxlength' => true, 'id' => 'title', 'placeholder' => Yii::t('app', 'عنوان')]) ?>
             </div>
             <div class=" col-lg-4 col-md-4 col-sm-6 col-xs-6">    
-                <?= $form->field($model, 'type')->textInput() ?>
+            
+                <?= $form->field($model, 'type')->dropDownList
+                    (["0"=>'دربست',"1"=>"خصوصی"], ['id' => 'typeID',
+                    'prompt' => Yii::t('app', 'اقامتگاه')]); ?>
             </div>  
             <div class=" col-lg-4 col-md-4 col-sm-6 col-xs-6">    
                 <?= $form->field($model, 'quantity')->textInput() ?>
