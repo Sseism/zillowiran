@@ -15,7 +15,8 @@ class AppAsset extends AssetBundle
         'css/bootstrap.min.css',
         'css/morris.css',
         'css/style.css',
-        'css/icons.css'
+        'css/icons.css',
+        'css/fonticonhotel.css'
     ];
     public $js = [
 //        'js/jquery.min.js',
