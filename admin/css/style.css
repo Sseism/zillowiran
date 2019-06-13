@@ -3287,4 +3287,17 @@ input[type=number]::-webkit-outer-spin-button {
   text-align: center;
 /*      border: none;*/
 }
+.label_num{
+    display:block !important;
+}
 /*input number css*/
+
+/*facilitie*/
+.chfacilitie label {
+    margin-right: 24px;
+}
+/*facilitie*/
+.card.m-b-30.form_box {
+    box-shadow: 1px 5px 18px #979696;
+    margin-top: 3%;
+}

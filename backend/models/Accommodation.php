@@ -3,7 +3,7 @@
 namespace backend\models;
 
 use Yii;
-
+use yii\helpers\ArrayHelper;
 /**
  * This is the model class for table "accommodation".
  *
@@ -84,7 +84,7 @@ class Accommodation extends \yii\db\ActiveRecord
             'type' => Yii::t('app', 'نوع اقامتگاه'),
             'acc_type_id' => Yii::t('app', 'Acc Type ID'),
             'acc_region_id' => Yii::t('app', 'منطقه اقامتگاه'),
-            'discription' => Yii::t('app', 'توضبحات'),
+            'discription' => Yii::t('app', 'توضیحات'),
             'quantity' => Yii::t('app', 'ظرفیت'),
             'max_quantity' => Yii::t('app', 'حداکثر ظرفیت'),
             'room_count' => Yii::t('app', 'تعداد اتاق'),
@@ -169,4 +169,31 @@ class Accommodation extends \yii\db\ActiveRecord
     {
         return $this->hasMany(DayPrice::className(), ['accID' => 'id']);
     }
+    
+/*****************************facilitie*****************************/
+ public function getAllFacilitie($id='') {
+           if($id==''){
+        $all = \backend\models\Facilitie::find()->where(['owner'=>2])->all();
+         }
+         else
+         {
+             $all = \backend\models\Facilitie::find()->where(['owner'=>2,'faciliti_type'=>$id])->all();
+         }
+
+        return ArrayHelper::map($all, 'id', 'title');
+    }
+
+    public function getSelectedFaciliti() {
+        $selected = [];
+        if($this->isNewRecord!=1){
+        $all = \backend\models\Facilitie::find()->all();
+        $id=Yii::$app->request->get('id');
+        $selected = ArrayHelper::getColumn(\backend\models\Accinfacilities::findAll(['accID' =>$id ]), function ($element) {
+                    return $element['facilitieID'];
+                }
+        );
+        }
+        return $selected;
+    }
+        
 }

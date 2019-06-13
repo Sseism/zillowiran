@@ -11,6 +11,7 @@ use yii\helpers\ArrayHelper;
 
 use backend\models\Accommodation;
 use backend\models\AccType;
+use backend\models\city;
 use backend\models\Accinfacilitie;
 use backend\models\AccRegion;
 /**
@@ -79,6 +80,7 @@ class AccommodationController extends Controller
         
         $model->acc_type_id=ArrayHelper::map(AccType::find()->where(['type'=>1])->all(),'id','title');
         $model->acc_region_id=ArrayHelper::map(AccRegion::find()->all(),'id','title');
+        $model->city=ArrayHelper::map(City::find()->all(),'id','title');
  
         
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
