@@ -261,20 +261,48 @@ $this->registerJsFile('/zillow/admin/js/form.js');
  <!-- ********************************************************** step 6 -->
   <div class="setup-content" id="step-6">
                      <div class="row">
-                    <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12"> 
-                        <?= $form->field($model, 'aac_policies')->textarea(['rows' => 6]) ?>
+                          <h2 class="fs-title">قوانین و مقررات اقامتگاه</h2>
+                         
+                <div class="form-group col-md-12">
+                    <div class="checkbox">
+                        <?php
+                        echo Html::checkBoxList('aac_policies', $model->getSelectedPolicies(), $model->getAllPolicies(), [
+                            'item' =>
+                            function ($index, $label, $name, $checked, $value) {
+                                return Html::checkbox($name, $checked, [
+                                            'value' => $value,
+                                            'label' => '<label for="' . $label . '">' . $label . '</label>',
+                                            'labelOptions' => [
+                                                'class' => 'col-md-12 chfacilitie',
+                                            ],
+                                                //'id' => $label,
+                                ]);
+                            },
+                            'separator' => false, 'template' => '<div class="item">{input}{label}</div>',])
+                        ?>
                     </div>
+                </div>
+                    
                 <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-6">    
                     <?= $form->field($model, 'check_in')->textInput() ?>
                 </div>  
                 <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-6">    
                     <?= $form->field($model, 'check_out')->textInput() ?>
                 </div> 
-                    <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group col-lg-4 col-md-4 col-sm-10 col-xs-10">
                         <?= $form->field($model, 'cancell_policies')->textInput() ?>
                     </div>
-                    <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <?= $form->field($model, 'min_res_night')->textInput() ?>
+                    <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                          <label class='label_num'><i class="fonticonhotel icon-extra-long-beds"></i><span><?= Yii::t('app', 'حداقل شب رزرو') ?></span></label>
+                        <div class="number-input">
+                            <span onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></span>
+                            <?=
+                            $form->field($model, 'min_res_night')->textInput([
+                                'type' => 'number', 'min' => 0, 'value' => '0'
+                            ])->label(false)
+                            ?>
+                            <span onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></span>
+                        </div>
 
                     </div>
                 </div>

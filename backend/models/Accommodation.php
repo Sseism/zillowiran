@@ -195,5 +195,24 @@ class Accommodation extends \yii\db\ActiveRecord
         }
         return $selected;
     }
-        
+    public function getAllPolicies() {
+
+        $all = \backend\models\policies::find()->all();
+
+
+        return ArrayHelper::map($all, 'id', 'title');
+    }
+
+    public function getSelectedPolicies() {
+        $selected = [];
+        if($this->isNewRecord!=1){
+        $all = \backend\models\policies::find()->all();
+        $id=Yii::$app->request->get('id');
+        $selected = ArrayHelper::getColumn(\backend\models\policies::findAll(['accID' =>$id ]), function ($element) {
+                    return $element['facilitieID'];
+                }
+        );
+        }
+        return $selected;
+    }    
 }
