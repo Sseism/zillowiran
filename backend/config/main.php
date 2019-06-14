@@ -13,6 +13,13 @@ return [
     'bootstrap' => ['log'],
     'modules' => [],
     'components' => [
+        'assetManager' => [
+        'bundles' => [
+            'yii\web\JqueryAsset' => [
+                'jsOptions' => [ 'position' => \yii\web\View::POS_HEAD ],
+            ],
+        ],
+    ],
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],

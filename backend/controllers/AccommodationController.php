@@ -3,12 +3,17 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\Accommodation;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
 
+use backend\models\Accommodation;
+use backend\models\AccType;
+use backend\models\city;
+use backend\models\Accinfacilitie;
+use backend\models\AccRegion;
 /**
  * AccommodationController implements the CRUD actions for Accommodation model.
  */
@@ -62,16 +67,28 @@ class AccommodationController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
+    public function actionAcctype($type)
+    {
+         Yii::$app->response->format = 'json';
+         $response=ArrayHelper::map(AccType::find()->where(['type'=>$type])->all(),'id','title');
+    
+          return $response;
+    }
     public function actionCreate()
     {
         $model = new Accommodation();
-
+        
+        $model->acc_type_id=ArrayHelper::map(AccType::find()->where(['type'=>1])->all(),'id','title');
+        $model->acc_region_id=ArrayHelper::map(AccRegion::find()->all(),'id','title');
+        $model->city=ArrayHelper::map(City::find()->all(),'id','title');
+ 
+        
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
-
+$model->type = '1';
         return $this->render('create', [
-            'model' => $model,
+            'model' => $model
         ]);
     }
 

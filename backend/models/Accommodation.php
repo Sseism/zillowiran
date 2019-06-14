@@ -3,7 +3,7 @@
 namespace backend\models;
 
 use Yii;
-
+use yii\helpers\ArrayHelper;
 /**
  * This is the model class for table "accommodation".
  *
@@ -83,25 +83,25 @@ class Accommodation extends \yii\db\ActiveRecord
             'title' => Yii::t('app', 'عنوان'),
             'type' => Yii::t('app', 'نوع اقامتگاه'),
             'acc_type_id' => Yii::t('app', 'Acc Type ID'),
-            'acc_region_id' => Yii::t('app', 'Acc Region ID'),
-            'discription' => Yii::t('app', 'توضبحات'),
+            'acc_region_id' => Yii::t('app', 'منطقه اقامتگاه'),
+            'discription' => Yii::t('app', 'توضیحات'),
             'quantity' => Yii::t('app', 'ظرفیت'),
             'max_quantity' => Yii::t('app', 'حداکثر ظرفیت'),
             'room_count' => Yii::t('app', 'تعداد اتاق'),
             'bed1' => Yii::t('app', 'اتاق یک تخته'),
-            'bed2' => Yii::t('app', 'اناق دو تخته'),
+            'bed2' => Yii::t('app', 'اتاق دو تخته'),
             'extrabed' => Yii::t('app', 'تعداد تخت اضافه'),
             'wc' => Yii::t('app', 'تعداد سرویس بهداشتی'),
             'bathroom' => Yii::t('app', 'تعداد حمام'),
             'area_all' => Yii::t('app', 'مساحت کلی'),
-            'area_building' => Yii::t('app', 'Area Building'),
+            'area_building' => Yii::t('app', 'مساحت'),
             'state' => Yii::t('app', 'استان'),
             'city' => Yii::t('app', 'شهر'),
             'address' => Yii::t('app', 'آدرس'),
             'lat' => Yii::t('app', 'Lat'),
             'long' => Yii::t('app', 'Long'),
             'point' => Yii::t('app', 'Point'),
-            'zipcode' => Yii::t('app', 'Zipcode'),
+            'zipcode' => Yii::t('app', 'کد پستی'),
             'phone' => Yii::t('app', 'تلفن'),
             'check_in' => Yii::t('app', 'ساعت ورود'),
             'check_out' => Yii::t('app', 'ساعت خروج'),
@@ -169,4 +169,50 @@ class Accommodation extends \yii\db\ActiveRecord
     {
         return $this->hasMany(DayPrice::className(), ['accID' => 'id']);
     }
+    
+/*****************************facilitie*****************************/
+ public function getAllFacilitie($id='') {
+           if($id==''){
+        $all = \backend\models\Facilitie::find()->where(['owner'=>2])->all();
+         }
+         else
+         {
+             $all = \backend\models\Facilitie::find()->where(['owner'=>2,'faciliti_type'=>$id])->all();
+         }
+
+        return ArrayHelper::map($all, 'id', 'title');
+    }
+
+    public function getSelectedFaciliti() {
+        $selected = [];
+        if($this->isNewRecord!=1){
+        $all = \backend\models\Facilitie::find()->all();
+        $id=Yii::$app->request->get('id');
+        $selected = ArrayHelper::getColumn(\backend\models\Accinfacilities::findAll(['accID' =>$id ]), function ($element) {
+                    return $element['facilitieID'];
+                }
+        );
+        }
+        return $selected;
+    }
+    public function getAllPolicies() {
+
+        $all = \backend\models\policies::find()->all();
+
+
+        return ArrayHelper::map($all, 'id', 'title');
+    }
+
+    public function getSelectedPolicies() {
+        $selected = [];
+        if($this->isNewRecord!=1){
+        $all = \backend\models\policies::find()->all();
+        $id=Yii::$app->request->get('id');
+        $selected = ArrayHelper::getColumn(\backend\models\policies::findAll(['accID' =>$id ]), function ($element) {
+                    return $element['facilitieID'];
+                }
+        );
+        }
+        return $selected;
+    }    
 }

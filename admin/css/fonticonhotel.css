@@ -1,0 +1,985 @@
+@font-face {
+    font-family: 'fonticonhotel';
+    src: url(fonts/fonticonhotel.eot) format("embedded-opentype"),
+    /* url(../fonts/fonticonhotel.svg) format("svg"), */
+    url(fonts/fonticonhotel.ttf) format("truetype"),
+    url(fonts/fonticonhotel.woff) format("woff")
+}
+
+.fonticonhotel[class^="icon-"]:before,
+.fonticonhotel[class*=" icon-"]:before {
+    font-family: "fonticonhotel";
+    font-style: normal;
+    font-weight: 400;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: auto;
+    margin-right: 0;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: inherit;
+    margin-left: 0;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;  
+}
+
+.icon-uniF100:before {
+    content: '\f100'
+}
+
+.icon-24hour-check-in:before {
+    content: '\f101'
+}
+
+.icon-24hour-frontdesk:before {
+    content: '\f102'
+}
+
+.icon-24hour-room-service:before {
+    content: '\f103'
+}
+
+.icon-24hour-security:before {
+    content: '\f104'
+}
+
+.icon-internet:before {
+    content: '\f108'
+}
+
+.icon-iron:before {
+    content: '\f109'
+}
+
+.icon-additional-bathroom:before {
+    content: '\f10a'
+}
+
+.icon-additional-information:before {
+    content: '\f10b'
+}
+
+.icon-additional-toilet:before {
+    content: '\f10c'
+}
+
+.icon-air-conditioning:before {
+    content: '\f10d'
+}
+
+.icon-air-purifier:before {
+    content: '\f10e'
+}
+
+.icon-airport-transfer:before {
+    content: '\f111'
+}
+
+.icon-alarm-clock:before {
+    content: '\f112'
+}
+
+.icon-american-express:before {
+    content: '\f113'
+}
+
+.icon-apartment:before {
+    content: '\f114'
+}
+
+.icon-atm-cash-machine-on-site:before {
+    content: '\f11b'
+}
+
+.icon-babysitting:before {
+    content: '\f11c'
+}
+
+.icon-badminton-court:before {
+    content: '\f11d'
+}
+
+.icon-balcony-terrace:before {
+    content: '\f11e'
+}
+
+.icon-bathrobes:before {
+    content: '\f120'
+}
+
+.icon-bathroom-basics:before {
+    content: '\f121'
+}
+
+.icon-bathroom-phone:before {
+    content: '\f122'
+}
+
+.icon-bathrooms:before {
+    content: '\f123'
+}
+
+.icon-bathtub:before {
+    content: '\f124'
+}
+
+.icon-bbq-facilities:before {
+    content: '\f125'
+}
+
+.icon-bed:before {
+    content: '\f126'
+}
+
+.icon-bedroom:before {
+    content: '\f127'
+}
+
+.icon-bicycle-rental:before {
+    content: '\f128'
+}
+
+.icon-billiards:before {
+    content: '\f129'
+}
+
+.icon-blackout-curtains:before {
+    content: '\f12a'
+}
+
+.icon-boat:before {
+    content: '\f12b'
+}
+
+.icon-book-now-pay-later:before {
+    content: '\f12c'
+}
+
+.icon-book-without-a-creditcard:before {
+    content: '\f12d'
+}
+
+.icon-bowling-alley:before {
+    content: '\f12e'
+}
+
+.icon-breakfast:before {
+    content: '\f12f'
+}
+
+.icon-business-center:before {
+    content: '\f130'
+}
+
+.icon-business-facilities:before {
+    content: '\f131'
+}
+
+.icon-buzzer-wireless-intercom:before {
+    content: '\f132'
+}
+
+.icon-cancellation-policy-non-refund-special-condition:before {
+    content: '\f134'
+}
+
+.icon-canoe:before {
+    content: '\f135'
+}
+
+.icon-car-hire:before {
+    content: '\f136'
+}
+
+.icon-car-park:before {
+    content: '\f137'
+}
+
+.icon-car-power-charging-station:before {
+    content: '\f138'
+}
+
+.icon-carbon-monoxide-detector:before {
+    content: '\f139'
+}
+
+.icon-carpeting:before {
+    content: '\f13a'
+}
+
+.icon-casino:before {
+    content: '\f13d'
+}
+
+.icon-chapel:before {
+    content: '\f13e'
+}
+
+.icon-children-high-chair:before {
+    content: '\f141'
+}
+
+.icon-children-playground:before {
+    content: '\f142'
+}
+
+.icon-city-view:before {
+    content: '\f143'
+}
+
+.icon-cleaning-products:before {
+    content: '\f144'
+}
+
+.icon-closet:before {
+    content: '\f146'
+}
+
+.icon-clothes-dryer-pay:before {
+    content: '\f147'
+}
+
+.icon-clothes-rack:before {
+    content: '\f148'
+}
+
+.icon-clothes-washer-free:before {
+    content: '\f149'
+}
+
+.icon-coffee-shop:before {
+    content: '\f14a'
+}
+
+.icon-coffee-tea-maker:before {
+    content: '\f14b'
+}
+
+.icon-complimentary-bottled-water:before {
+    content: '\f14c'
+}
+
+.icon-complimentary-instant-coffee:before {
+    content: '\f14d'
+}
+
+.icon-complimentary-tea:before {
+    content: '\f14e'
+}
+
+.icon-concierge:before {
+    content: '\f14f'
+}
+
+.icon-currency-exchange:before {
+    content: '\f156'
+}
+
+.icon-daily-housekeeping:before {
+    content: '\f157'
+}
+
+.icon-daily-newspaper:before {
+    content: '\f158'
+}
+
+.icon-dart-board:before {
+    content: '\f159'
+}
+
+.icon-desk:before {
+    content: '\f15c'
+}
+
+.icon-dishwasher:before {
+    content: '\f15f'
+}
+
+.icon-diving:before {
+    content: '\f160'
+}
+
+.icon-dressing-room:before {
+    content: '\f163'
+}
+
+.icon-dryer:before {
+    content: '\f164'
+}
+
+.icon-dvd-cd-player:before {
+    content: '\f165'
+}
+
+.icon-electric-blanket:before {
+    content: '\f167'
+}
+
+.icon-elevator:before {
+    content: '\f168'
+}
+
+.icon-essentials:before {
+    content: '\f16a'
+}
+
+.icon-executive-floor:before {
+    content: '\f16b'
+}
+
+.icon-executive-lounge-access:before {
+    content: '\f16c'
+}
+
+.icon-express-check-in-check-out:before {
+    content: '\f16d'
+}
+
+.icon-extra-long-beds:before {
+    content: '\f16e'
+}
+
+.icon-facilities-for-disabled-guests:before {
+    content: '\f170'
+}
+
+.icon-family-room:before {
+    content: '\f171'
+}
+
+.icon-fan:before {
+    content: '\f172'
+}
+
+.icon-fax-machine:before {
+    content: '\f174'
+}
+
+.icon-fire-extinguisher:before {
+    content: '\f176'
+}
+
+.icon-fireplace:before {
+    content: '\f177'
+}
+
+.icon-first-aid-kit:before {
+    content: '\f178'
+}
+
+.icon-fishing:before {
+    content: '\f179'
+}
+
+.icon-fitness-center:before {
+    content: '\f17a'
+}
+
+.icon-flight-earn:before {
+    content: '\f17c'
+}
+
+.icon-free-cancellation:before {
+    content: '\f17d'
+}
+
+.icon-free-welcome-drink:before {
+    content: '\f17e'
+}
+
+.icon-free-wifi-in-all-rooms:before {
+    content: '\f17f'
+}
+
+.icon-garden:before {
+    content: '\f180'
+}
+
+.icon-gift-souvenir-shop:before {
+    content: '\f182'
+}
+
+.icon-golf-course-on-site:before {
+    content: '\f183'
+}
+
+.icon-golf-course-within-3k:before {
+    content: '\f184'
+}
+
+.icon-grocery-deliveries:before {
+    content: '\f185'
+}
+
+.icon-guest-house:before {
+    content: '\f186'
+}
+
+.icon-gym:before {
+    content: '\f187'
+}
+
+.icon-hair-dryer:before {
+    content: '\f188'
+}
+
+.icon-halal-restaurant:before {
+    content: '\f189'
+}
+
+.icon-half-full-board:before {
+    content: '\f18a'
+}
+
+.icon-hangers:before {
+    content: '\f18b'
+}
+
+.icon-heating:before {
+    content: '\f18c'
+}
+
+.icon-hiking-trails:before {
+    content: '\f18d'
+}
+
+.icon-holiday-house:before {
+    content: '\f18e'
+}
+
+.icon-homestay:before {
+    content: '\f18f'
+}
+
+.icon-horse-riding:before {
+    content: '\f190'
+}
+
+.icon-hot-spring-bath:before {
+    content: '\f191'
+}
+
+.icon-hot-tub:before {
+    content: '\f192'
+}
+
+.icon-humidifier:before {
+    content: '\f19a'
+}
+
+.icon-in-room-safe:before {
+    content: '\f19d'
+}
+
+.icon-in-room-tablet:before {
+    content: '\f19e'
+}
+
+.icon-in-room-video-games:before {
+    content: '\f19f'
+}
+
+.icon-indoor-poor:before {
+    content: '\f1a0'
+}
+
+.icon-infirmary:before {
+    content: '\f1a2'
+}
+
+.icon-inhouse-movies:before {
+    content: '\f1a4'
+}
+
+.icon-interconnecting-room-available:before {
+    content: '\f1a6'
+}
+
+.icon-ipod-docking-station:before {
+    content: '\f1a7'
+}
+
+.icon-islamic-prayer-room:before {
+    content: '\f1a8'
+}
+
+.icon-jacuzzi-bathtub:before {
+    content: '\f1a9'
+}
+
+.icon-karaoke:before {
+    content: '\f1ab'
+}
+
+.icon-kids-club:before {
+    content: '\f1ac'
+}
+
+.icon-kitchen:before {
+    content: '\f1ad'
+}
+
+.icon-kitchenware:before {
+    content: '\f1ae'
+}
+
+.icon-kosher-restaurant:before {
+    content: '\f1af'
+}
+
+.icon-laptop-friendly-workspace:before {
+    content: '\f1b0'
+}
+
+.icon-laptop-safe-box:before {
+    content: '\f1b1'
+}
+
+.icon-laundromat:before {
+    content: '\f1b2'
+}
+
+.icon-laundry-service:before {
+    content: '\f1b3'
+}
+
+.icon-library:before {
+    content: '\f1b4'
+}
+
+.icon-linens:before {
+    content: '\f1b8'
+}
+
+.icon-lockers:before {
+    content: '\f1b9'
+}
+
+.icon-luggage-storage:before {
+    content: '\f1ba'
+}
+
+.icon-massage:before {
+    content: '\f1c2'
+}
+
+.icon-max-occupancy-plus:before {
+    content: '\f1c4'
+}
+
+.icon-max-occupancy:before {
+    content: '\f1c5'
+}
+
+.icon-meeting-facilities:before {
+    content: '\f1c6'
+}
+
+.icon-microwave:before {
+    content: '\f1c8'
+}
+
+.icon-mini-bar:before {
+    content: '\f1c9'
+}
+
+.icon-mirror:before {
+    content: '\f1cc'
+}
+
+.icon-mosquitonet:before {
+    content: '\f1cd'
+}
+
+.icon-motorbike:before {
+    content: '\f1ce'
+}
+
+.icon-mountain-view:before {
+    content: '\f1cf'
+}
+
+.icon-nightclub:before {
+    content: '\f1da'
+}
+
+.icon-non-smoking-room:before {
+    content: '\f1db'
+}
+
+.icon-number-of-rooms:before {
+    content: '\f1e1'
+}
+
+.icon-outdoor-pool:before {
+    content: '\f1e2'
+}
+
+.icon-pay-at-the-place:before {
+    content: '\f1e3'
+}
+
+.icon-payment-option-no-credit-card:before {
+    content: '\f1e4'
+}
+
+.icon-pets-allowed:before {
+    content: '\f1e5'
+}
+
+.icon-photocopying:before {
+    content: '\f1e6'
+}
+
+.icon-pool-kids:before {
+    content: '\f1ed'
+}
+
+.icon-pool:before {
+    content: '\f1ee'
+}
+
+.icon-poolside-bar:before {
+    content: '\f1ef'
+}
+
+.icon-portable-wifi-rental:before {
+    content: '\f1f0'
+}
+
+.icon-postal-service:before {
+    content: '\f1f2'
+}
+
+.icon-printer:before {
+    content: '\f1f3'
+}
+
+.icon-private-beach:before {
+    content: '\f1f4'
+}
+
+.icon-private-entrance:before {
+    content: '\f1f5'
+}
+
+.icon-private-pool:before {
+    content: '\f1f6'
+}
+
+.icon-refrigerator:before {
+    content: '\f1f9'
+}
+
+.icon-residence:before {
+    content: '\f1fa'
+}
+
+.icon-restaurant:before {
+    content: '\f1fb'
+}
+
+.icon-room-promotion-for-flashdeal:before {
+    content: '\f1fd'
+}
+
+.icon-room-promotion-for-mobiledeal:before {
+    content: '\f1fe'
+}
+
+.icon-room-promotion-for-otherdeal:before {
+    content: '\f1ff'
+}
+
+.icon-room-promotion-for-smartdeal:before {
+    content: '\f200'
+}
+
+.icon-room-promotion-super-savedeal:before {
+    content: '\f201'
+}
+
+.icon-room-promotion:before {
+    content: '\f202'
+}
+
+.icon-room-service:before {
+    content: '\f203'
+}
+
+.icon-safety-deposit-boxes:before {
+    content: '\f204'
+}
+
+.icon-salon:before {
+    content: '\f205'
+}
+
+.icon-sauna:before {
+    content: '\f206'
+}
+
+.icon-scale:before {
+    content: '\f207'
+}
+
+.icon-seating-area:before {
+    content: '\f20a'
+}
+
+.icon-separate-dining-area:before {
+    content: '\f20c'
+}
+
+.icon-separate-living-room:before {
+    content: '\f20d'
+}
+
+.icon-separate-shower-and-tub:before {
+    content: '\f20e'
+}
+
+.icon-sewing-kit:before {
+    content: '\f20f'
+}
+
+.icon-shampoo:before {
+    content: '\f210'
+}
+
+.icon-shared-kitchen:before {
+    content: '\f211'
+}
+
+.icon-shoeshine-kit:before {
+    content: '\f212'
+}
+
+.icon-shops:before,
+.icon-shop:before {
+    content: '\f214'
+}
+
+.icon-shower:before {
+    content: '\f215'
+}
+
+.icon-shrine:before {
+    content: '\f216'
+}
+
+.icon-shuttle-service:before {
+    content: '\f217'
+}
+
+.icon-ski-equipment-rentals:before {
+    content: '\f218'
+}
+
+.icon-ski-lessons:before {
+    content: '\f219'
+}
+
+.icon-skiing:before {
+    content: '\f21a'
+}
+
+.icon-slippers:before {
+    content: '\f21b'
+}
+
+.icon-smoke-detector:before {
+    content: '\f21c'
+}
+
+.icon-smoking-allowed:before {
+    content: '\f21d'
+}
+
+.icon-smoking-area:before {
+    content: '\f21e'
+}
+
+.icon-snorkeling:before {
+    content: '\f21f'
+}
+
+.icon-sofa:before {
+    content: '\f220'
+}
+
+.icon-solarium:before {
+    content: '\f221'
+}
+
+.icon-soundproofing:before {
+    content: '\f222'
+}
+
+.icon-spa-sauna:before {
+    content: '\f223'
+}
+
+.icon-special-condition:before {
+    content: '\f224'
+}
+
+.icon-sqm:before {
+    content: '\f225'
+}
+
+.icon-squash-courts:before {
+    content: '\f226'
+}
+
+.icon-steamroom:before {
+    content: '\f230'
+}
+
+.icon-suitable-for-events:before {
+    content: '\f231'
+}
+
+.icon-surfing-lessons:before {
+    content: '\f232'
+}
+
+.icon-table-tennis:before {
+    content: '\f233'
+}
+
+.icon-tamil:before {
+    content: '\f234'
+}
+
+.icon-tax-receipt-available:before {
+    content: '\f235'
+}
+
+.icon-taxi-service:before {
+    content: '\f236'
+}
+
+.icon-telephone:before {
+    content: '\f237'
+}
+
+.icon-tennis-courts:before {
+    content: '\f238'
+}
+
+.icon-theme-park:before {
+    content: '\f239'
+}
+
+.icon-ticket-service:before {
+    content: '\f23d'
+}
+
+.icon-time-icon:before {
+    content: '\f23e'
+}
+
+.icon-toiletries:before {
+    content: '\f23f'
+}
+
+.icon-tooltip:before {
+    content: '\f240'
+}
+
+.icon-tours:before {
+    content: '\f246'
+}
+
+.icon-towels:before {
+    content: '\f247'
+}
+
+.icon-trouser-press:before {
+    content: '\f249'
+}
+
+.icon-tv-area:before {
+    content: '\f24a'
+}
+
+.icon-tv:before {
+    content: '\f24b'
+}
+
+.icon-umbrella:before {
+    content: '\f24c'
+}
+
+.icon-user-font-icon:before {
+    content: '\f24e'
+}
+
+.icon-valet-parking:before {
+    content: '\f24f'
+}
+
+.icon-vending-machine:before {
+    content: '\f250'
+}
+
+.icon-views:before {
+    content: '\f251'
+}
+
+.icon-villa:before {
+    content: '\f252'
+}
+
+.icon-wake-up-service:before {
+    content: '\f254'
+}
+
+.icon-washer:before {
+    content: '\f256'
+}
+
+.icon-water-park:before {
+    content: '\f258'
+}
+
+.icon-water-sports-motorized:before {
+    content: '\f259'
+}
+
+.icon-water-sports-non-motorized:before {
+    content: '\f25a'
+}
+
+.icon-watersports-equipment-rentals:before {
+    content: '\f25b'
+}
+
+.icon-wheelchair-accessible:before {
+    content: '\f25c'
+}
+
+.icon-wifi-in-public-areas:before {
+    content: '\f25d'
+}
+
+.icon-wifi:before {
+    content: '\f25e'
+}
+
+.icon-wind-surfing:before {
+    content: '\f25f'
+}
+
+.icon-wooden-parqueted-flooring:before {
+    content: '\f260'
+}
+
+.icon-yoga-room:before {
+    content: '\f262'
+}
