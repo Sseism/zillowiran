@@ -86,9 +86,7 @@ $this->registerJsFile('/zillow/admin/js/form.js');
             <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-6">    
                 <?= $form->field($model, 'area_building')->textInput() ?>
             </div>  
-            <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-6">    
-                <?= $form->field($model, 'city')->textInput() ?>
-            </div>  
+
           <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-6">    
                 <?= $form->field($model, 'phone')->textInput() ?>
             </div>
