@@ -3,7 +3,7 @@
 namespace backend\models;
 
 use Yii;
-
+use yii\helpers\ArrayHelper;
 /**
  * This is the model class for table "housing".
  *
@@ -122,5 +122,30 @@ class Housing extends \yii\db\ActiveRecord
     public function getPropertyType()
     {
         return $this->hasOne(Proprtytype::className(), ['id' => 'property_type']);
+    }
+    /*****************************facilitie*****************************/
+ public function getAllFacilitie($id='') {
+           if($id==''){
+        $all = \backend\models\Facilitie::find()->where(['owner'=>1])->all();
+         }
+         else
+         {
+             $all = \backend\models\Facilitie::find()->where(['owner'=>1,'faciliti_type'=>$id])->all();
+         }
+
+        return ArrayHelper::map($all, 'id', 'title');
+    }
+
+    public function getSelectedFaciliti() {
+        $selected = [];
+        if($this->isNewRecord!=1){
+        $all = \backend\models\Facilitie::find()->all();
+        $id=Yii::$app->request->get('id');
+        $selected = ArrayHelper::getColumn(\backend\models\Facilitieinhousing::findAll(['homeID' =>$id ]), function ($element) {
+                    return $element['facilitieID'];
+                }
+        );
+        }
+        return $selected;
     }
 }
