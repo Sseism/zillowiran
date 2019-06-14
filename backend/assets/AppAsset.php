@@ -16,7 +16,8 @@ class AppAsset extends AssetBundle
         'css/morris.css',
         'css/style.css',
         'css/icons.css',
-        'css/fonticonhotel.css'
+        'css/fonticonhotel.css',
+        'css/form.css'
     ];
     public $js = [
 //        'js/jquery.min.js',
@@ -27,6 +28,7 @@ class AppAsset extends AssetBundle
         'js/jquery.slimscroll.js',
         'js/jquery.blockUI.js',
         'js/waves.js',
+        'js/form.js',
         'js/jquery.nicescroll.js',
         'js/jquery.scrollTo.min.js',
        

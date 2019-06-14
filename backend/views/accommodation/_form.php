@@ -7,12 +7,7 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Accommodation */
 /* @var $form yii\widgets\ActiveForm */
-$this->registerCssFile('/zillow/admin/css/form.css', [
-    'depends' => [\yii\web\JqueryAsset::className()]
-]);
-$this->registerJsFile('/zillow/admin/js/form.js');
 ?>
-
 <div class="accommodation-form">
 
     <div class="card m-b-30 form_box">
