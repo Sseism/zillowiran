@@ -69,12 +69,12 @@ use yii\widgets\ActiveForm;
                     </div> 
                     <div class=" col-lg-4 col-md-4 col-sm-6 col-xs-6">  
 
-                        <?= $form->field($model, 'city_id')->textInput() ?>
+                        <?= $form->field($model, 'city_id')->dropDownList($model->city_id, ['id' => 'propertyType']) ?>
 
                     </div> 
                     <div class=" col-lg-4 col-md-4 col-sm-6 col-xs-6">  
 
-                        <?= $form->field($model, 'property_type')->dropDownList($model->propertyType, ['id' => 'propertyType']) ?>
+                        <?= $form->field($model, 'property_type')->dropDownList($model->property_type, ['id' => 'propertyType']) ?>
 
                     </div>  
                     <div class=" col-lg-4 col-md-4 col-sm-6 col-xs-6">  

@@ -8,7 +8,10 @@ use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
 
+use backend\models\city;
+use backend\models\Proprtytype;
 /**
  * HousingController implements the CRUD actions for Housing model.
  */
@@ -62,10 +65,13 @@ class HousingController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
+
     public function actionCreate()
     {
         $model = new Housing();
 
+        $model->property_type=ArrayHelper::map(Proprtytype::find()->all(),'id','title');
+        $model->city_id=ArrayHelper::map(City::find()->all(),'id','title');
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
