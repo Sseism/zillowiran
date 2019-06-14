@@ -10,7 +10,6 @@
  */
 
 namespace {
-
     if (!class_exists('PHPUnit_Util_String')) {
 
         /**
@@ -99,11 +98,6 @@ namespace PHPUnit\Util\Log {
              * @var bool
              */
             protected $currentTestPass = true;
-
-            /**
-             * @var array
-             */
-            protected $logEvents = [];
 
             /**
              * An error occurred.
@@ -233,9 +227,9 @@ namespace PHPUnit\Util\Log {
             public function startTestSuite(\PHPUnit\Framework\TestSuite $suite)
             {
                 $this->currentTestSuiteName = $suite->getName();
-                $this->currentTestName      = '';
+                $this->currentTestName = '';
 
-                $this->addLogEvent(
+                $this->write(
                     [
                         'event' => 'suiteStart',
                         'suite' => $this->currentTestSuiteName,
@@ -252,9 +246,7 @@ namespace PHPUnit\Util\Log {
             public function endTestSuite(\PHPUnit\Framework\TestSuite $suite)
             {
                 $this->currentTestSuiteName = '';
-                $this->currentTestName      = '';
-
-                $this->writeAll($this->logEvents);
+                $this->currentTestName = '';
             }
 
             /**
@@ -267,7 +259,7 @@ namespace PHPUnit\Util\Log {
                 $this->currentTestName = \PHPUnit\Util\Test::describe($test);
                 $this->currentTestPass = true;
 
-                $this->addLogEvent(
+                $this->write(
                     [
                         'event' => 'testStart',
                         'suite' => $this->currentTestSuiteName,
@@ -303,7 +295,7 @@ namespace PHPUnit\Util\Log {
                 if ($test !== null && method_exists($test, 'hasOutput') && $test->hasOutput()) {
                     $output = $test->getActualOutput();
                 }
-                $this->addLogEvent(
+                $this->write(
                     [
                         'event'   => 'test',
                         'suite'   => $this->currentTestSuiteName,
@@ -318,19 +310,9 @@ namespace PHPUnit\Util\Log {
             }
 
             /**
-             * @param array $event_data
+             * @param string $buffer
              */
-            protected function addLogEvent($event_data = [])
-            {
-                if (count($event_data)) {
-                    array_push($this->logEvents, $event_data);
-                }
-            }
-
-            /**
-             * @param array $buffer
-             */
-            public function writeAll($buffer)
+            public function write($buffer)
             {
                 array_walk_recursive(
                     $buffer, function (&$input) {

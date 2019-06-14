@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
+use kartik\file\FileInput;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Housing */
 /* @var $form yii\widgets\ActiveForm */
@@ -33,11 +33,17 @@ use yii\widgets\ActiveForm;
                     <div class="stepwizard-step">
                         <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
                         <p>
-                       
+                        <?=Yii::t('app', 'امکانات')?>
                         </p>
                     </div>
                     <div class="stepwizard-step">
                         <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+                        <p>
+                            <?=Yii::t('app', 'تصاویر')?>
+                        </p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
                         <p>
                             <?=Yii::t('app', 'آدرس و توضیحات')?>
                         </p>
@@ -131,7 +137,7 @@ use yii\widgets\ActiveForm;
                     <?=Yii::t('app', 'ملک شما چه امکاناتی دارد؟')?>
                 </h2>
                 <div class="row">
-                         <div class="form-group col-md-12 col-sm-12">
+                <div class="form-group col-md-12 col-sm-12">
                     <div class="checkbox">
                         <?php
                         echo Html::checkBoxList('facilitie_in_home', $model->getSelectedFaciliti(), $model->getAllFacilitie(), [
@@ -150,6 +156,7 @@ use yii\widgets\ActiveForm;
                         ?>
                     </div>
                 </div>
+             
                     <div class="form-group col-md-12 col-sm-12">
                         <?= $form->field($model, 'neibourhood')->textInput(['maxlength' => true]) ?>
                     </div>
@@ -158,6 +165,42 @@ use yii\widgets\ActiveForm;
             </div>
          <!-- ********************************************************** step 4 -->
          <div class="setup-content" id="step-4">
+              <h2 class="fs-title">
+              <?=Yii::t('app', 'تصاویر ملک خود را وارد کنید')?>
+              </h2>
+              <div class="row">
+                         <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <?php
+                    echo FileInput::widget([
+                        //'model' => $model,
+                        //'attribute' => 'url[]',
+                        'name' => 'url[]',
+                        'options' => [
+                            'multiple' => true,
+                            'accept' => 'image/*'
+                        ],
+                        'pluginOptions' => [
+                            'showUpload' => false,
+                            // 'showCaption' => false,
+                            // 'showRemove' => false,
+                            // 'showUpload' => false,
+//                          'browseClass' => 'btn btn-primary btn-block',
+                            // 'browseIcon' => '<i class="glyphicon glyphicon-camera"></i> ',
+                            // 'browseLabel' =>  'Attach Business Card',
+                             'mainClass' => 'form-group',
+                             'allowedFileExtensions' => ['jpg','gif','png'],
+                            'overwriteInitial' => false
+                        ],
+
+                    ]);
+                    ?>
+                    </div>
+              
+              </div>
+              <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" ><?=Yii::t('app', 'بعدی')?></button>
+         </div>
+         <!-- ********************************************************** step 5 -->
+         <div class="setup-content" id="step-5">
               <h2 class="fs-title">
               <?=Yii::t('app', 'آدرس و توضیحات تکمیلی در خصوص ملک را در این بخش وارد کنید')?>
               </h2>

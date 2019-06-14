@@ -1,8 +1,3 @@
-4.6.0 / 2019-01-16
-==================
-
- * Updated translations (including 'Example' as synonym for 'Scenario' in `en`)
-
 4.5.1 / 2017-08-30
 ==================
 
