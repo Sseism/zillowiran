@@ -55,7 +55,7 @@ class Housing extends \yii\db\ActiveRecord
     {
         return [
             [['title', 'uselid', 'city_id', 'ad_type', 'property_type', 'lat', 'long', 'area', 'price', 'room_count', 'built_year', 'addres', 'description', 'facilitie_in_home', 'tag', 'email', 'phone', 'date', 'modify_date', 'del', 'neibourhood', 'latLong', 'lang'], 'required'],
-            [['uselid', 'city_id', 'ad_type', 'property_type', 'area', 'price', 'rent', 'contract_time', 'room_count', 'built_year', 'facilitie_in_home', 'date', 'modify_date'], 'integer'],
+            [['uselid', 'city_id', 'ad_type', 'property_type', 'area', 'price', 'rent', 'contract_time', 'room_count', 'built_year', 'facilitie_in_home', 'date', 'modify_date'.'status'], 'integer'],
             [['addres', 'description'], 'string'],
             [['title', 'lat', 'long', 'email', 'neibourhood', 'latLong', 'lang'], 'string', 'max' => 255],
             [['tag', 'del'], 'string', 'max' => 4],
@@ -73,7 +73,7 @@ class Housing extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('app', 'ID'),
             'title' => Yii::t('app', 'عنوان'),
-            'uselid' => Yii::t('app', 'Uselid'),
+            'uselid' => Yii::t('app', 'ثبت کننده'),
             'city_id' => Yii::t('app', 'شهر'),
             'ad_type' => Yii::t('app', 'نوع معامله'),
             'property_type' => Yii::t('app', 'نوع ملک'),
@@ -97,6 +97,7 @@ class Housing extends \yii\db\ActiveRecord
             'neibourhood' => Yii::t('app', 'اماکن اطراف'),
             'latLong' => Yii::t('app', 'Lat Long'),
             'lang' => Yii::t('app', 'Lang'),
+            'status' => Yii::t('app', 'وضعیت'),
         ];
     }
 

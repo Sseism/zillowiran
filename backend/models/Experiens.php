@@ -58,17 +58,17 @@ class Experiens extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'title' => Yii::t('app', 'Title'),
-            'exp_type_id' => Yii::t('app', 'Exp Type ID'),
+            'title' => Yii::t('app', 'عنوان تجربه'),
+            'exp_type_id' => Yii::t('app', 'نوع تجربه'),
             'exp_sub_type_id' => Yii::t('app', 'Exp Sub Type ID'),
-            'city_id' => Yii::t('app', 'City ID'),
-            'description' => Yii::t('app', 'Description'),
-            'facilitie' => Yii::t('app', 'Facilitie'),
-            'we_do' => Yii::t('app', 'We Do'),
-            'time' => Yii::t('app', 'Time'),
-            'materiel' => Yii::t('app', 'Materiel'),
-            'about_host' => Yii::t('app', 'About Host'),
-            'price' => Yii::t('app', 'Price'),
+            'city_id' => Yii::t('app', 'شهر'),
+            'description' => Yii::t('app', 'اطلاعات '),
+            'facilitie' => Yii::t('app', 'امکانات میزبان'),
+            'we_do' => Yii::t('app', 'چه خواهیم کرد'),
+            'time' => Yii::t('app', 'مدت زمان'),
+            'materiel' => Yii::t('app', 'تجهیزات لازم'),
+            'about_host' => Yii::t('app', 'درباره میزبان'),
+            'price' => Yii::t('app', 'مبلغ'),
             'lang' => Yii::t('app', 'Lang'),
         ];
     }

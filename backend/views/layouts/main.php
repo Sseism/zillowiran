@@ -51,7 +51,33 @@ AppAsset::register($this);
                                     <span> داشبورد </span>
                                 </a>
                             </li>
-
+                           
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-home"></i> <span> املاک </span><span class="badge badge-success badge-pill float-right">30</span> <span class="menu-arrow float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="/zillow/admin/index.php?r=housing"><span class="badge badge-success badge-pill float-right">10</span>ملک های ثبت شده</a></li>
+                                            <li><a href="/zillow/admin/index.php?r=housing"><span class="badge badge-success badge-pill float-right">15</span>رهن و اجاره</a></li>
+                                            <li><a href="/zillow/admin/index.php?r=housing"><span class="badge badge-success badge-pill float-right">5</span>فروش</a></li>
+                                            <li><a href="/zillow/admin/index.php?r=housing%2Fcreate">ثبت ملک</a></li>
+                                        </ul>
+                                   
+                            </li>	
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-home"></i> <span> اقامتگاه </span><span class="badge badge-success badge-pill float-right">15</span> <span class="menu-arrow float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="/zillow/admin/index.php?r=accommodation"><span class="badge badge-success badge-pill float-right">15</span>اقامتگاه های ثبت شده</a></li>
+                                            <li><a href="/zillow/admin/index.php?r=accommodation%2Fcreate">ثبت اقامتگاه</a></li>
+                                        </ul>
+                                   
+                            </li>	
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-home"></i> <span> تجربه ها </span><span class="badge badge-success badge-pill float-right">10</span> <span class="menu-arrow float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="/zillow/admin/index.php?r=experiens"><span class="badge badge-success badge-pill float-right">10</span>تجربه های ثبت شده</a></li>
+                                            <li><a href="/zillow/admin/index.php?r=experiens%2Fcreate">ثبت تجربه</a></li>
+                                        </ul>
+                                   
+                            </li>	
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="fas fa-user"></i> <span> کاربران </span><span class="badge badge-success badge-pill float-right">20</span> <span class="menu-arrow float-right"><i class="mdi mdi-chevron-right"></i></span></a>
                                 <ul class="list-unstyled">
@@ -60,30 +86,14 @@ AppAsset::register($this);
                                 </ul>
                             </li>
 
-							<li class="has_sub">
-									<a href="javascript:void(0);" class="waves-effect"><i class="dripicons-home"></i> <span> املاک ثبت شده </span><span class="badge badge-success badge-pill float-right">20</span> <span class="menu-arrow float-right"><i class="mdi mdi-chevron-right"></i></span></a>
-									<ul class="list-unstyled">
-										<li><a href="rentproperty.html"><span class="badge badge-success badge-pill float-right">15</span>رهن و اجاره</a></li>
-										<li><a href="saleproperty.html"><span class="badge badge-success badge-pill float-right">5</span>فروش</a></li>
-									</ul>
-                            </li>
+                          
                             </li>  
 
-							<li>
-                                <a href="#" class="waves-effect">
-                                    <i class="fab fa-untappd"></i>
-                                    <span> تجربه های ثبت شده <span class="badge badge-success badge-pill float-right">15</span></span>
-                                </a>
-                            </li>
+			
 
-							<li>
-                                <a href="#" class="waves-effect">
-                                    <i class="fas fa-university"></i>
-                                    <span> اقامتگاه ها <span class="badge badge-success badge-pill float-right">140</span></span>
-                                </a>
-                            </li>							
+									
 
-							<li>
+                            <li>
                                 <a href="#" class="waves-effect">
                                     <i class="mdi mdi-message-settings-variant"></i>
                                     <span> تنظیمات </span>

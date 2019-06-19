@@ -1,0 +1,57 @@
+@media all and (max-width: 560px) ,(min-width: 1200px) {
+
+    .ReserveCalendarWrapper .month_table th .day_short_name
+    {
+        display:block;
+    }
+
+    .ReserveCalendarWrapper .month_table th .day_name
+    {
+        display:none;
+    }
+
+    .ReserveCalendarWrapper .day_wrapper .price
+    {
+        font-size: 9px;
+    }
+}
+
+@media all and (max-width: 860px) and (min-width: 690px) {
+
+    .ReserveCalendarWrapper .day_wrapper .discount_ribbon
+    {
+        width: 70px;
+        top: 7px;
+        right: -18px;
+    }
+}
+
+@media all and (max-width: 689px) and (min-width: 560px) {
+
+    .ReserveCalendarWrapper .day_wrapper .discount_ribbon
+    {
+        line-height: 12px;
+        width: 60px;
+        top: 6px;
+        right: -16px;
+        font-size: 8px;
+    }
+}
+
+@media all and (max-width: 559px),(min-width: 1200px) {
+
+    .ReserveCalendarWrapper .month_table td {
+        height: 62px;
+    }
+
+    .ReserveCalendarWrapper .day_wrapper .discount_ribbon
+    {
+        width: 100%;
+        top: auto;
+        bottom: 0px;
+        right: auto;
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        font-size: 11px;
+    }
+}

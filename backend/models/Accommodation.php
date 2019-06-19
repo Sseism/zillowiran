@@ -39,6 +39,7 @@ use yii\helpers\ArrayHelper;
  * @property int $price
  * @property string $latLong
  * @property string $lang زبان سطر
+ * @property int $status دیده نشده 0 درانتظار1 تاییدشده2 ردشده3
  *
  * @property AccImage[] $accImages
  * @property AccPolicies[] $accPolicies
@@ -64,8 +65,11 @@ class Accommodation extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'type', 'acc_type_id', 'acc_region_id', 'discription', 'quantity', 'max_quantity', 'room_count', 'bed1', 'bed2', 'extrabed', 'wc', 'bathroom', 'area_all', 'area_building', 'state', 'city', 'address', 'lat', 'long', 'point', 'zipcode', 'phone', 'check_in', 'check_out', 'aac_policies', 'cancell_policies', 'min_res_night', 'price', 'latLong', 'lang'], 'required'],
-            [['type', 'acc_type_id', 'acc_region_id', 'quantity', 'max_quantity', 'room_count', 'bed1', 'bed2', 'extrabed', 'wc', 'bathroom', 'area_all', 'area_building', 'state', 'city', 'address', 'point', 'zipcode', 'phone', 'check_in', 'check_out', 'cancell_policies', 'min_res_night', 'price'], 'integer'],
+            [['title', 'type', 'acc_type_id', 'acc_region_id', 'discription', 'quantity', 'max_quantity', 'room_count', 'bed1',
+                'bed2', 'extrabed', 'wc', 'bathroom', 'area_all', 'area_building', 'state', 'city', 'address',
+                'point', 'zipcode', 'phone', 'check_in', 'check_out',
+                'min_res_night', 'price'], 'required'],
+            [['type', 'acc_type_id', 'acc_region_id', 'quantity', 'max_quantity', 'room_count', 'bed1', 'bed2', 'extrabed', 'wc', 'bathroom', 'area_all', 'area_building', 'state', 'city', 'address', 'point', 'zipcode', 'phone', 'check_in', 'check_out', 'cancell_policies', 'min_res_night', 'price','status'], 'integer'],
             [['discription', 'aac_policies'], 'string'],
             [['title', 'lat', 'long', 'latLong', 'lang'], 'string', 'max' => 255],
             [['acc_type_id'], 'exist', 'skipOnError' => true, 'targetClass' => AccType::className(), 'targetAttribute' => ['acc_type_id' => 'id']],
@@ -82,7 +86,7 @@ class Accommodation extends \yii\db\ActiveRecord
             'id' => Yii::t('app', 'ID'),
             'title' => Yii::t('app', 'عنوان'),
             'type' => Yii::t('app', 'نوع اقامتگاه'),
-            'acc_type_id' => Yii::t('app', 'Acc Type ID'),
+            'acc_type_id' => Yii::t('app', 'اقامتگاه'),
             'acc_region_id' => Yii::t('app', 'منطقه اقامتگاه'),
             'discription' => Yii::t('app', 'توضیحات'),
             'quantity' => Yii::t('app', 'ظرفیت'),
@@ -93,8 +97,8 @@ class Accommodation extends \yii\db\ActiveRecord
             'extrabed' => Yii::t('app', 'تعداد تخت اضافه'),
             'wc' => Yii::t('app', 'تعداد سرویس بهداشتی'),
             'bathroom' => Yii::t('app', 'تعداد حمام'),
-            'area_all' => Yii::t('app', 'مساحت کلی'),
-            'area_building' => Yii::t('app', 'مساحت'),
+            'area_all' => Yii::t('app', 'زیربنا'),
+            'area_building' => Yii::t('app', 'بنا'),
             'state' => Yii::t('app', 'استان'),
             'city' => Yii::t('app', 'شهر'),
             'address' => Yii::t('app', 'آدرس'),
@@ -111,6 +115,7 @@ class Accommodation extends \yii\db\ActiveRecord
             'price' => Yii::t('app', 'قیمت'),
             'latLong' => Yii::t('app', 'Lat Long'),
             'lang' => Yii::t('app', 'Lang'),
+            'status' => Yii::t('app', 'وضعیت'),
         ];
     }
 

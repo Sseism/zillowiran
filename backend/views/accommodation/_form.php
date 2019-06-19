@@ -50,8 +50,7 @@ use yii\widgets\ActiveForm;
             <!-- ********************************************************** step 1 -->
 
             <div class=" setup-content" id="step-1">
-                <h2 class="fs-title">اقامتگاه تان را معرفی کنید</h2>
-                <h3 class="fs-subtitle">مهمان شما چه فضایی از اقامتگاه را در اختیار خواهد داشت؟</h3>
+                
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">       
                         <?= $form->field($model, 'title')->textInput(['maxlength' => true, 'id' => 'title', 'placeholder' => Yii::t('app', 'عنوان اقامتگاه')]) ?>
@@ -74,14 +73,12 @@ use yii\widgets\ActiveForm;
                         <?= $form->field($model, 'discription')->textarea(['rows' => 6]) ?> 
                     </div>
                 </div>
-                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >بعدی</button>
+                <button class="btn btn-primary nextBtn btn-lg pull-left" type="button" >بعدی</button>
 
             </div>
             <!-- ********************************************************** step 2 -->
 
             <div class=" setup-content" id="step-2">
-                <h2 class="fs-title">فضای اقامتگاه خود را ترسیم نمایید</h2>
-               
                 <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
                     <div class="col-md-3">
                         <label class='label_num'><i class="fonticonhotel icon-family-room"></i><span><?= Yii::t('app', 'ظرفیت') ?></span></label>
@@ -184,12 +181,11 @@ use yii\widgets\ActiveForm;
                 </div>  
 
 
-                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >بعدی</button>
+                <button class="btn btn-primary nextBtn btn-lg pull-left" type="button" >بعدی</button>
             </div>
             <!-- ********************************************************** step 3 -->
 
             <div class=" setup-content" id="step-3">
-                <h2 class="fs-title">اقامتگاه شما چه امکاناتی دارد؟</h2>
                 
                 <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">    
                     <?= $form->field($model, 'area_building')->textInput() ?>
@@ -220,12 +216,11 @@ use yii\widgets\ActiveForm;
                         ?>
                     </div>
                 </div>
-                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >بعدی</button>
+                <button class="btn btn-primary nextBtn btn-lg pull-left" type="button" >بعدی</button>
             </div>
             <!-- ********************************************************** step 4 -->
             <div class="setup-content" id="step-4">
-                <h2 class="fs-title">راه ارتباطی و موقعیت مکانی اقامتگاه تان را تعیین کنید</h2>
-               
+             
                 <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-6">    
                     <?= $form->field($model, 'city')->dropDownList($model->city, ['id' => 'accTypeSelect']) ?>
                 </div> 
@@ -244,20 +239,19 @@ use yii\widgets\ActiveForm;
  
                 
 
-                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >بعدی</button>
+                <button class="btn btn-primary nextBtn btn-lg pull-left" type="button" >بعدی</button>
             </div>
 
   <!-- ********************************************************** step 5 -->
   <div class="setup-content" id="step-5">
       گالری تصاویر
       
-      <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >بعدی</button>
+      <button class="btn btn-primary nextBtn btn-lg pull-left" type="button" >بعدی</button>
   </div>
  <!-- ********************************************************** step 6 -->
   <div class="setup-content" id="step-6">
                      <div class="row">
-                          <h2 class="fs-title">قوانین و مقررات اقامتگاه</h2>
-                         
+                       
                 <div class="form-group col-md-12">
                     <div class="checkbox">
                         <?php
@@ -302,7 +296,7 @@ use yii\widgets\ActiveForm;
                     </div>
                 </div>
        <div class="form-group">
-            <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success']) ?>
+            <?= Html::submitButton(Yii::t('app', 'ثبت'), ['class' => 'btn btn-success pull-left']) ?>
         </div>
 
   </div>

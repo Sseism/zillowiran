@@ -91,7 +91,7 @@ use kartik\file\FileInput;
                     </div>  
                   
                 </div>   
-          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" ><?=Yii::t('app', 'بعدی')?></button>
+          <button class="btn btn-primary nextBtn btn-lg pull-left" type="button" ><?=Yii::t('app', 'بعدی')?></button>
             </div>       
             <!-- ********************************************************** step 2 -->
 
@@ -128,7 +128,7 @@ use kartik\file\FileInput;
                          <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
                     </div> 
                 </div>
-                 <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" ><?=Yii::t('app', 'بعدی')?></button>
+                 <button class="btn btn-primary nextBtn btn-lg pull-left" type="button" ><?=Yii::t('app', 'بعدی')?></button>
             </div>
         <!-- ********************************************************** step 3 -->
 
@@ -161,7 +161,7 @@ use kartik\file\FileInput;
                         <?= $form->field($model, 'neibourhood')->textInput(['maxlength' => true]) ?>
                     </div>
                 </div>
-                  <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" ><?=Yii::t('app', 'بعدی')?></button>
+                  <button class="btn btn-primary nextBtn btn-lg pull-left" type="button" ><?=Yii::t('app', 'بعدی')?></button>
             </div>
          <!-- ********************************************************** step 4 -->
          <div class="setup-content" id="step-4">
@@ -171,7 +171,7 @@ use kartik\file\FileInput;
               <div class="row">
                          <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <?php
-                    echo FileInput::widget([
+                    echo kartik\file\FileInput::widget([
                         //'model' => $model,
                         //'attribute' => 'url[]',
                         'name' => 'url[]',
@@ -197,7 +197,7 @@ use kartik\file\FileInput;
                     </div>
               
               </div>
-              <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" ><?=Yii::t('app', 'بعدی')?></button>
+              <button class="btn btn-primary nextBtn btn-lg pull-left" type="button" ><?=Yii::t('app', 'بعدی')?></button>
          </div>
          <!-- ********************************************************** step 5 -->
          <div class="setup-content" id="step-5">
@@ -212,7 +212,7 @@ use kartik\file\FileInput;
                  <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
                   </div>
               </div>
-               <?= Html::submitButton(Yii::t('app', 'ثبت'), ['class' => 'btn btn-success']) ?>
+               <?= Html::submitButton(Yii::t('app', 'ثبت'), ['class' => 'btn btn-success pull-left']) ?>
          </div>
     <?php ActiveForm::end(); ?>
 

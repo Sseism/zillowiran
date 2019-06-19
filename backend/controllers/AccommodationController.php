@@ -77,15 +77,24 @@ class AccommodationController extends Controller
     public function actionCreate()
     {
         $model = new Accommodation();
+       
+ 
+        
+        if ($model->load(Yii::$app->request->post()) ) {
+            if($model->save())
+            {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
+            else
+            {
+                print_r($model->getErrors());
+                die();
+            }
+        }
         
         $model->acc_type_id=ArrayHelper::map(AccType::find()->where(['type'=>1])->all(),'id','title');
         $model->acc_region_id=ArrayHelper::map(AccRegion::find()->all(),'id','title');
         $model->city=ArrayHelper::map(City::find()->all(),'id','title');
- 
-        
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        }
 $model->type = '1';
         return $this->render('create', [
             'model' => $model

@@ -3290,6 +3290,11 @@ input[type=number]::-webkit-outer-spin-button {
 .label_num{
     display:block !important;
 }
+
+.label_num .fonticonhotel {
+    margin-left: 5px;
+    color: #46cd93;
+}
 /*input number css*/
 
 /*facilitie*/
